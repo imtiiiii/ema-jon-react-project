@@ -1,0 +1,23 @@
+.products{
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    border-bottom: 1px solid gray;
+    margin-right: 10px;
+    
+}
+
+.products img{
+    width: 100%;
+}
+
+.product-name{
+    color: blue;
+    font-weight: 400;
+}
+.btn-cart{
+    width: 150px;
+    height: 50px;
+    background-color: indianred;
+    border-radius: 10px;
+    font-weight: 700;
+}

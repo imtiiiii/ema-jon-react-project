@@ -1,0 +1,23 @@
+
+.cart-details{
+    padding-left: 20px;
+    background-color: navajowhite;
+    border-radius: 20px;
+}
+
+
+.summery{
+    text-align: center;
+    
+   
+}
+
+
+.order-total{
+    font-weight: 700;
+    color:indianred;
+    
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
