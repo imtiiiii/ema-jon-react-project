@@ -4,9 +4,13 @@ import Product from '../Product/Product';
 import './Shop.css'
 
 import { retriveCart, setStorage } from "../../utilities/localStorage"
+import useProducts from '../../Hooks/UseProducts';
+import { useHistory } from 'react-router';
 const Shop = () => {
+
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const history = useHistory();
 
     useEffect(() => {
         fetch("./products.JSON")
@@ -35,13 +39,13 @@ const Shop = () => {
 
     const handleAddToCart = product => {
         const newCart = [...cart, product];
-
         //console.log(newCart);
         const localStorageKey = product.key;
         //console.log(localStorageKey);
         let x = setStorage("cart", localStorageKey);
         return setCart(newCart);
     }
+    const hadleReviewCart = () => history.push("./OrderReview");
 
 
     return (
@@ -57,7 +61,9 @@ const Shop = () => {
                 </h1>
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart}>
+                    <button className="btn-cart" onClick={hadleReviewCart}>Review Order</button>
+                </Cart>
             </div>
 
         </section>

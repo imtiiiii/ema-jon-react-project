@@ -13,7 +13,7 @@ const Product = (props) => {
             <div className="product-info">
                 <h4 className="product-name">{name}</h4>
                 <h5>by: {seller}</h5>
-                <h5>{price}</h5>
+                <h5>Price: ${price}</h5>
                 <h5>Only {stock} left in stock</h5>
                 <button className="btn-cart"
                     onClick={() => props.handleCart(props.productInfo)}

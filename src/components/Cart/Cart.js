@@ -4,7 +4,7 @@ import './Cart.css'
 const Cart = (props) => {
 
     const itemArray = props.cart;
-    console.log(itemArray);
+    console.log(props);
     let itemsPrice = 0;
     let shippingPrice = 0;
     let tax = 0;
@@ -40,6 +40,7 @@ const Cart = (props) => {
             <h4>Cost before tax: ${costBeforeTax}</h4>
             <h4>Estimated tax: ${tax}</h4>
             <h2 className="order-total">Order total: ${total}</h2>
+            {props.children}
 
         </div>
     );

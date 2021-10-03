@@ -29,4 +29,4 @@ const retriveCart = () => {
     return storage ? JSON.parse(storage) : {};
 }
 
-export { setStorage, retriveCart }
+export { setStorage, retriveCart, getStorage }
