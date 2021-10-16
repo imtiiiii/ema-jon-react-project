@@ -14,7 +14,7 @@ const OrderReview = () => {
     let keyFlag = 0;
 
     const removeItem = key => {
-        console.log(key);
+
         const newCart = cart.filter(element => element.key !== key)
         setCart(newCart);
         let accessToDb = getStorage("cart");
