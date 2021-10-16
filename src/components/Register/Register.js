@@ -1,7 +1,18 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import './Register.css'
 const Register = () => {
+    const { googleLogin } = useAuth();
+    //const history = useHistory();
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then((result) => {
+
+            }).catch((error) => {
+
+            });
+    }
     return (
         <div className="form">
             <div>
@@ -19,7 +30,7 @@ const Register = () => {
                 <button type="submit">Register</button>
                 <h4>Or,</h4>
                 <hr></hr>
-                <button type="button" className="btn-cart">Register with Google</button>
+                <button type="button" className="btn-cart" onClick={handleGoogleLogin}>Register with Google</button>
                 <div>
                     <h3>
                         <NavLink to="/login">Already have an account? Login</NavLink>
